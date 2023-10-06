@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import MovieList from "../MovieList/MovieList";
 import "./App.css";
-// import MovieDetails from '../MovieDetails/MovieDetails'; doesn't exist
+import MovieDetails from "../MovieDetails/MovieDetails";
 
 const theme = createTheme({
   palette: {
@@ -54,9 +54,10 @@ function App() {
             <Route path="/" exact>
               <MovieList />
             </Route>
-            {/* <Route path="/details/:id">
+            <Route path="/details/:id">
               <MovieDetails />
             </Route>
+            {/*
             <Route path="/add-movie">
               <AddMovie />
             </Route> */}
