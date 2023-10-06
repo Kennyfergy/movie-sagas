@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 function MovieList() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const movies = useSelector((store) => store.movies);
+  const movies = useSelector((store) => store.movies.movies);
 
   useEffect(() => {
     dispatch({ type: "FETCH_MOVIES" });
@@ -19,9 +19,10 @@ function MovieList() {
 
   return (
     <main>
-      <Typography className="movie-header" variant="h2" gutterBottom>
+      {/* <Typography className="movie-header" variant="h4" gutterBottom>
         MovieList
-      </Typography>
+      </Typography> */}
+      <h4></h4>
       <section className="movies">
         {movies.map((movie) => (
           <Card

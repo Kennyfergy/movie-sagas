@@ -40,9 +40,6 @@ function App() {
         <div className="App">
           <AppBar position="static">
             <Toolbar>
-              <Typography variant="h1" component="div" style={{ flexGrow: 1 }}>
-                The Movies Saga!
-              </Typography>
               <Button
                 className="homeButton"
                 color="inherit"
@@ -51,6 +48,14 @@ function App() {
               >
                 Home
               </Button>
+              <Typography
+                variant="h1"
+                component="div"
+                style={{ flexGrow: 1, textAlign: "center" }}
+              >
+                The Movies Saga!
+              </Typography>
+
               {/* <Button color="inherit" component={Link} to="/add-movie">
                 Add Movie
               </Button> */}
