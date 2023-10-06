@@ -9,6 +9,7 @@ import {
   Toolbar,
   Button,
 } from "@mui/material";
+
 import MovieList from "../MovieList/MovieList";
 import "./App.css";
 import MovieDetails from "../MovieDetails/MovieDetails";
@@ -42,10 +43,15 @@ function App() {
               <Typography variant="h1" component="div" style={{ flexGrow: 1 }}>
                 The Movies Saga!
               </Typography>
-              {/* <Button color="inherit" component={Link} to="/">
+              <Button
+                className="homeButton"
+                color="inherit"
+                component={Link}
+                to="/"
+              >
                 Home
               </Button>
-              <Button color="inherit" component={Link} to="/add-movie">
+              {/* <Button color="inherit" component={Link} to="/add-movie">
                 Add Movie
               </Button> */}
             </Toolbar>
