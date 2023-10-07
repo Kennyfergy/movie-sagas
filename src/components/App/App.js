@@ -39,7 +39,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <div className="App">
-          <AppBar position="static">
+          <AppBar position="fixed">
             <Toolbar>
               <Button
                 className="homeButton"

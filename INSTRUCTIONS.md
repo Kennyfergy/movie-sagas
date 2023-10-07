@@ -97,8 +97,8 @@ The Add Movie page should have the buttons:
 
 ### 2. Refresh on Details Page
 
-Allow the app to maintain on refresh our details page.
-Research [React Router URL PARAMS](https://reactrouter.com/web/example/url-params)
+- [x] Allow the app to maintain on refresh our details page.
+      Research [React Router URL PARAMS](https://reactrouter.com/web/example/url-params)
 
 ### 3. Edit Page (Stretch)
 
