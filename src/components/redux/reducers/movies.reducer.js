@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
 // Used to store details for each movie
-const detailsReducer = (state = [], action) => {
+const movieDetails = (state = [], action) => {
   switch (action.type) {
-    case "SET_DETAILS":
+    case "SET_MOVIE_DETAILS":
       return action.payload;
     default:
       return state;
@@ -20,14 +20,4 @@ const movies = (state = [], action) => {
   }
 };
 
-// Used to store the movie genres
-const genres = (state = [], action) => {
-  switch (action.type) {
-    case "SET_GENRES":
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-export default combineReducers({ detailsReducer, movies, genres });
+export default combineReducers({ movieDetails, movies });

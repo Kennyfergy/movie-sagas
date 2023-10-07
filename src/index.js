@@ -16,6 +16,7 @@ import _rootReducer from "./components/redux/reducers/_root.reducer";
 // Create the rootSaga generator function
 function* rootSaga() {
   yield takeEvery("FETCH_MOVIES", fetchAllMovies);
+  yield takeEvery("FETCH_MOVIE_DETAILS", fetchMovieDetails);
 }
 
 function* fetchAllMovies() {
@@ -26,6 +27,16 @@ function* fetchAllMovies() {
     yield put({ type: "SET_MOVIES", payload: movies.data });
   } catch {
     console.log("get all error");
+  }
+}
+
+function* fetchMovieDetails(action) {
+  try {
+    console.log("reaching saga ");
+    const response = yield axios.get(`/api/details/${action.payload}`);
+    yield put({ type: "SET_MOVIE_DETAILS", payload: response.data });
+  } catch (error) {
+    console.log("Error in fetching movie details", error);
   }
 }
 
