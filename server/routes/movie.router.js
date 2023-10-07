@@ -16,6 +16,25 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  // Destructure the request body for validation
+  const { title, poster, description, genre_id } = req.body;
+
+  // Validate parameters
+  if (!title || !poster || !description || !genre_id) {
+    res.status(400).send({ error: "All fields are required" });
+    return;
+  }
+
+  if (
+    typeof title !== "string" ||
+    typeof poster !== "string" ||
+    typeof description !== "string" ||
+    !Number.isInteger(genre_id)
+  ) {
+    res.status(400).send({ error: "Invalid input types" });
+    return;
+  }
+
   console.log(req.body);
   // RETURNING "id" will give us back the id of the created movie
   const insertMovieQuery = `
