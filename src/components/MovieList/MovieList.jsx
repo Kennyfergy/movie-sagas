@@ -10,9 +10,11 @@ function MovieList() {
   const movies = useSelector((store) => store.movies.movies);
 
   useEffect(() => {
+    //displaying movies on page load
     dispatch({ type: "FETCH_MOVIES" });
   }, []);
 
+  //moves user to the details page for selected movie
   const handleCardClick = (movieId) => {
     history.push(`/details/${movieId}`);
   };
@@ -47,6 +49,6 @@ function MovieList() {
       </section>
     </main>
   );
-}
+} //end MovieList
 
 export default MovieList;

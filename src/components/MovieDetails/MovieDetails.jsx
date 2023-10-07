@@ -19,6 +19,7 @@ function MovieDetails() {
 
   console.log("movieDetails", movieDetails);
 
+  //destructuring movie details for readability
   const movieTitle = movieDetails.title;
   const moviePoster = movieDetails.poster;
   const movieGenreList = movieDetails.genre;
@@ -52,6 +53,6 @@ function MovieDetails() {
       </div>
     </>
   );
-}
+} //end MovieDetails
 
 export default MovieDetails;

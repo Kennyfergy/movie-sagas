@@ -2,12 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App.js";
-import { createStore, combineReducers, applyMiddleware } from "redux";
-// Provider allows us to use redux within our react app
-import { Provider } from "react-redux";
-import logger from "redux-logger";
-// Import saga middleware
-import createSagaMiddleware from "redux-saga";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux"; // Provider allows us to use redux within our react app
+import logger from "redux-logger"; //logger to track actions and data changes
+import createSagaMiddleware from "redux-saga"; // Import saga middleware
 import { takeEvery, put } from "redux-saga/effects";
 import axios from "axios";
 
@@ -31,8 +29,9 @@ function* fetchAllMovies() {
 }
 
 function* fetchMovieDetails(action) {
+  //get details from DB
   try {
-    console.log("reaching saga ");
+    //console.log("reaching saga ");
     const response = yield axios.get(`/api/details/${action.payload}`);
     yield put({ type: "SET_MOVIE_DETAILS", payload: response.data });
   } catch (error) {
