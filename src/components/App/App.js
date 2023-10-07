@@ -13,6 +13,7 @@ import {
 import MovieList from "../MovieList/MovieList";
 import "./App.css";
 import MovieDetails from "../MovieDetails/MovieDetails";
+import MovieForm from "../MovieForm/MovieForm";
 
 const theme = createTheme({
   palette: {
@@ -56,9 +57,9 @@ function App() {
                 The Movies Saga!
               </Typography>
 
-              {/* <Button color="inherit" component={Link} to="/add-movie">
+              <Button color="inherit" component={Link} to="/form">
                 Add Movie
-              </Button> */}
+              </Button>
             </Toolbar>
           </AppBar>
           <Container>
@@ -68,10 +69,10 @@ function App() {
             <Route path="/details/:id">
               <MovieDetails />
             </Route>
-            {/*
-            <Route path="/add-movie">
-              <AddMovie />
-            </Route> */}
+
+            <Route path="/form">
+              <MovieForm />
+            </Route>
           </Container>
         </div>
       </Router>
