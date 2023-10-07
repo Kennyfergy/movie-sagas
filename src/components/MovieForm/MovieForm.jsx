@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import {
+  Button,
+  TextField,
+  Select,
+  MenuItem,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
+import "./MovieForm.css";
 
 function MovieForm() {
   const [title, setTitle] = useState("");
   const [poster, setPoster] = useState("");
   const [description, setDescription] = useState("");
-  //   const [genre, setGenre] = useState("");
+  const [genre, setGenre] = useState("");
   const history = useHistory();
 
-  const handleTitleChange = (event) => setTitle(event.target.value);
-  const handlePosterChange = (event) => setPoster(event.target.value);
-  const handleDescriptionChange = (event) => setDescription(event.target.value);
-
+  //const handleTitleChange = (event) => setTitle(event.target.value);
+  //const handlePosterChange = (event) => setPoster(event.target.value);
+  //const handleDescriptionChange = (event) => setDescription(event.target.value);
+  //const handleGenreChange = (event) => setGenre(event.target.value);
   const handleCancel = () => history.push("/");
 
   const handleSave = async () => {
@@ -23,7 +32,7 @@ function MovieForm() {
         title,
         poster,
         description,
-        // genre,
+        genre, //need to update the genre axios post
       });
       // Navigate to home on successful save
       history.push("/");
@@ -33,46 +42,86 @@ function MovieForm() {
   };
 
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          placeholder="Movie Title"
+    <div className="container">
+      <div className="form-container">
+        <TextField
+          fullWidth
+          label="Movie Title"
+          variant="outlined"
+          margin="normal"
           value={title}
-          onChange={handleTitleChange}
+          onChange={(e) => setTitle(e.target.value)}
         />
-        <input
-          type="url"
-          placeholder="Poster URL"
+        <TextField
+          fullWidth
+          label="Poster URL"
+          variant="outlined"
+          margin="normal"
           value={poster}
-          onChange={handlePosterChange}
+          onChange={(e) => setPoster(e.target.value)}
         />
-        <textarea
-          placeholder="Description"
+        <TextField
+          fullWidth
+          label="Description"
+          variant="outlined"
+          margin="normal"
+          multiline
+          rows={4}
           value={description}
-          onChange={handleDescriptionChange}
+          onChange={(e) => setDescription(e.target.value)}
         />
-        {/* <select value={genre} onChange={handleGenreChange}>
-          
-          <option value="" disabled>
-            Select genre
-          </option>
-          <option value="1">Adventure</option>
-          <option value="2">Animated</option>
-          <option value="2">Biographical</option>
-          <option value="2">Comedy</option>
-          <option value="2">Disaster</option>
-          <option value="2">Drama</option>
-          <option value="2">Epic</option>
-          <option value="2">Fantasy</option>
-          <option value="2">Musical</option>
-          <option value="2">Romantic</option>
-          <option value="2">Science Fiction</option>
-          <option value="2">Space-Opera</option>
-          <option value="2">Superhero</option>
-        </select> */}
-        <button onClick={handleCancel}>Cancel</button>
-        <button onClick={handleSave}>Save</button>
+        <FormControl fullWidth variant="outlined" margin="normal">
+          <InputLabel id="genre-label">Genre</InputLabel>
+          <Select
+            labelId="genre-label"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+            label="Genre"
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={1}>Adventure</MenuItem>
+            <MenuItem value={2}>Animated</MenuItem>
+            <MenuItem value={3}>Biographical</MenuItem>
+            <MenuItem value={4}>Comedy</MenuItem>
+            <MenuItem value={5}>Disaster</MenuItem>
+            <MenuItem value={6}>Drama</MenuItem>
+            <MenuItem value={7}>Epic</MenuItem>
+            <MenuItem value={8}>Fantasy</MenuItem>
+            <MenuItem value={9}>Musical</MenuItem>
+            <MenuItem value={10}>Romantic</MenuItem>
+            <MenuItem value={11}>Science Fiction</MenuItem>
+            <MenuItem value={12}>Space-Opera</MenuItem>
+            <MenuItem value={13}>Superhero</MenuItem>
+          </Select>
+        </FormControl>
+        <Button
+          variant="contained"
+          fullWidth
+          style={{
+            marginTop: "10px",
+            backgroundColor: "#450a0a",
+            color: "#fff",
+            transition: "all 0.3s ease",
+          }}
+          onClick={handleCancel}
+        >
+          Cancel
+        </Button>
+        <Button
+          variant="contained"
+          fullWidth
+          style={{
+            marginTop: "10px",
+            backgroundColor: "#022c22",
+            color: "#fff",
+            transition: "all 0.3s ease",
+          }}
+          onClick={handleSave}
+        >
+          Save
+        </Button>
       </div>
     </div>
   );
