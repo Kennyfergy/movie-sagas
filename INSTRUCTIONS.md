@@ -50,7 +50,7 @@ This view is completed already! It displays all of the movies in the movie datab
 
 ### Details Page
 
-- [] This should show all details **including ALL genres** for the selected movie, including title, description, and the image, too! Use Sagas and Redux to handle these requests and data.
+- [x] This should show all details **including ALL genres** for the selected movie, including title, description, and the image, too! Use Sagas and Redux to handle these requests and data.
 
 - [x] TODO: The details page should have a `Back to List` button, which should bring the user to the Home/List Page
 

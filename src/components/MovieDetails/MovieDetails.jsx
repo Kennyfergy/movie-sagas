@@ -2,6 +2,13 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import {
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  Container,
+} from "@mui/material";
 
 function MovieDetails() {
   const dispatch = useDispatch();
@@ -42,7 +49,6 @@ function MovieDetails() {
             <span>No Genres Listed</span>
           )}
         </h4>
-        <h4>{movieDescription}</h4>
       </div>
     </>
   );
