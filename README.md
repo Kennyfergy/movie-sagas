@@ -1,9 +1,88 @@
-# Project Name
+## Movies Web Application
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+### Overview
 
-## Description
+The Movies Web Application provides a platform for exploring and interacting with a wide array of movies. A user can view the list of movies, and click on the list for further details
 
-Your project description goes here. What problem did you solve? How did you solve it?
+### Project Structure
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Here's a brief overview of the main components of the project:
+
+#### 1. Server
+
+- `server.js`: Initializes and runs an Express server, connects middlewares, and sets up API routes.
+  API routes:
+- /api/movie: Is used for fetching and interacting with movies data.
+- /api/genre: Is used for fetching and interacting with genres data.
+- /api/details: Is used for fetching and interacting with detailed movie data.
+
+- `modules`: This directory may contains the pool file to connect postgresql.
+- `routes`: This directory contains files defining API routes and their handling logic.
+
+#### 2. Public
+
+- `index.html`: The main HTML file that serves as the entry point to the application.
+- `images`: A directory that could store image assets used in the application.
+
+#### 3. Source (src)
+
+- `index.js`: The main entry point for the client-side application, initializes Redux and Redux-Saga, and renders the root React component.
+- `index.css`: A CSS file to handle the main styling of the application.
+- `components`: Contains various components used throughout the application, including the root App component.
+
+### Getting Started
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/) and NPM (Node Package Manager): Ensure they are installed on your machine to run the application.
+- Express
+- Postgresql
+
+#### Installation and Running
+
+1. **Clone the Repository**
+   git clone [repo-url]
+   cd [project-folder]/movies
+2. **Install Dependencies**
+   Navigate to the `movies` directory and run:
+   npm install
+3. **Start the Server**
+   npm run server
+
+4. **Start the Client**
+   npm run client
+
+### Usage
+
+- List all of your favorite movies in once place
+- Add a new movie to the list
+- See a detailed description, with the poster, title, genres, and description
+
+### Built With
+
+- Javascript
+- React
+- Redux(with sagas)
+- CSS
+- Node
+- Postico2
+- Express
+- Material UI
+
+### Contributing
+
+To contribute to this project, please follow the steps below:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add YourFeature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+### Acknowledgments
+
+Thank you to Emerging Digital Academy for the skills and knowledge to complete this project!

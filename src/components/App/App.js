@@ -17,7 +17,7 @@ import MovieForm from "../MovieForm/MovieForm";
 
 const theme = createTheme({
   palette: {
-    mode: "dark", // Enables dark mode
+    mode: "dark", // Enables dark mode, stretch goal is to make a user selectable mode
     primary: {
       main: "#ffffff", // White color
     },
