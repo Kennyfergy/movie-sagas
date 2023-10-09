@@ -60,6 +60,24 @@ Here's a brief overview of the main components of the project:
 
 ### Usage
 
+The Movies Web Application provides a user-friendly interface for interacting with movies, allowing users to view movie lists, details, and add or update movies. Below is a basic guide on how to navigate through the application:
+
+Movie List View:
+
+The MovieList component displays a list of movies available in the database.
+Users are able to view brief details about each movie and select them to view more details.
+
+Movie Details View:
+
+Once a movie is selected from the MovieList, the MovieDetails component display detailed information about the movie.
+This contains more in-depth details, such as descriptions, genres, and images, among others.
+
+Add/Update Movie:
+
+The application has a form allowing users to add a new movie or update existing movie details.
+Users are able to input various details about the movie, such as title, description, and image URL, among others.
+Note: The application uses Material-UI for a coherent and user-friendly UI. You might encounter various UI components like buttons, cards, and forms as you navigate through the application.
+
 - List all of your favorite movies in once place
 - Add a new movie to the list
 - See a detailed description, with the poster, title, genres, and description
