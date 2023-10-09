@@ -59,6 +59,10 @@ Here's a brief overview of the main components of the project:
 ` npm run client`
 
 ### Usage
+<img width="1504" alt="Screenshot 2023-10-08 at 8 36 19 PM" src="https://github.com/Kennyfergy/movie-sagas/assets/121765690/f72741b6-13bc-4420-8cb2-0701c16bcede">
+<img width="1506" alt="Screenshot 2023-10-08 at 8 36 34 PM" src="https://github.com/Kennyfergy/movie-sagas/assets/121765690/8c460a38-e18b-415e-afe5-5d798a483b85">
+<img width="1508" alt="Screenshot 2023-10-08 at 8 36 57 PM" src="https://github.com/Kennyfergy/movie-sagas/assets/121765690/83f78ac5-01de-41d1-a60e-df4f7406ed3d">
+<img width="1499" alt="Screenshot 2023-10-08 at 8 36 49 PM" src="https://github.com/Kennyfergy/movie-sagas/assets/121765690/d5467448-6537-4125-878e-916217adfe15">
 
 The Movies Web Application provides a user-friendly interface for interacting with movies, allowing users to view movie lists, details, and add or update movies. Below is a basic guide on how to navigate through the application:
 
