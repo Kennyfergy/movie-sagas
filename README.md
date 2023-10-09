@@ -45,18 +45,24 @@ Here's a brief overview of the main components of the project:
    `git clone` [repo-url]
    cd [project-folder]/movies
 
-2. **Install Dependencies**
+2. **Set up Database**
+
+   Use the attached database.sql to set up database/tables and insert data
+
+3. **Install Dependencies**
 
    Navigate to the `movies` directory and run:
    `npm install`
 
-3. **Start the Server**
+4. **Start the Server**
 
    `npm run server`
 
-4. **Start the Client**
+5. **Start the Client**
 
 ` npm run client`
+
+5. **Navigate to localhost:3000**
 
 ### Usage
 
@@ -71,6 +77,7 @@ Movie Details View:
 
 Once a movie is selected from the MovieList, the MovieDetails component display detailed information about the movie.
 This contains more in-depth details, such as descriptions, genres, and images, among others.
+Note: The URL will have a structure like /details/[movieId] where [movieId] is the unique identifier of the selected movie.
 
 Add/Update Movie:
 
@@ -110,3 +117,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ### Acknowledgments
 
 Thank you to Emerging Digital Academy for the skills and knowledge to complete this project!
+
+### Support
+
+For any questions or comments you may have, please email me at: kenneth.w.ferguson2@gmail.com
