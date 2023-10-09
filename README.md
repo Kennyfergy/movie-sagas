@@ -41,16 +41,22 @@ Here's a brief overview of the main components of the project:
 #### Installation and Running
 
 1. **Clone the Repository**
-   git clone [repo-url]
+
+   `git clone` [repo-url]
    cd [project-folder]/movies
+
 2. **Install Dependencies**
+
    Navigate to the `movies` directory and run:
-   npm install
+   `npm install`
+
 3. **Start the Server**
-   npm run server
+
+   `npm run server`
 
 4. **Start the Client**
-   npm run client
+
+` npm run client`
 
 ### Usage
 
